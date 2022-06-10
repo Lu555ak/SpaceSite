@@ -1,14 +1,22 @@
+html, body {
+    width:  100%;
+    height: 100%;
+    margin: 0;
+}
+
 canvas{
     position: absolute;
     top: 0;
     left: 0;
 }
 
-main{
-    z-index: 20;
-
+main {
+    color: white;
+    z-index: 99;
 }
-.logo{
+
+
+/*.logo{
     position: absolute;
     top: 0;
     left: 0;
@@ -66,4 +74,4 @@ main{
 
 .navbar:hover .link-text{
     display: block;
-}
+}*/
