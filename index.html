@@ -4,11 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Space Site</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="module" src="/index.js"></script>
     </head>
     <body>   
         <canvas id="threeBackground" width="100%" height="100%"></canvas>
         <script type="module" src="/main.js"></script>
+        
+        <div id="preloaderBGR">
+            <div id="preloader">
+                <div id="loader"></div>
+            </div>
+        </div>
+        
+        <div id="main">
+            <div class="clock-loader"></div>
+        </div>
 
+        <script>
+            window.addEventListener("load", function(){ $("#preloaderBGR").delay(2000).fadeOut(2000, "swing"); })        
+        </script>
     </body>
 </html>

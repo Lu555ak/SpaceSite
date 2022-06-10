@@ -112,7 +112,7 @@ scene.add(uranusRing1, uranusRing2);
 planets[8].instance.add(uranusRing1, uranusRing2);
 
 
-//const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 function animate() {
     if(animationActive == true){
         requestAnimationFrame(animate);
@@ -120,7 +120,7 @@ function animate() {
         for(var i=0; i<planets.length; i++){
             planets[i].animate();
         }
-        //controls.update();
+        controls.update();
         renderer.render(scene, camera);
     }
     
@@ -147,3 +147,4 @@ if ( intersects.length > 0 ) {
 function planetClick(id){
     animationActive = false;
 }
+
