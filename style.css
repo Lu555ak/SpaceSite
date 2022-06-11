@@ -39,9 +39,10 @@ main {
     display: flex;
     width: 70vw;
     height: 80vh;
-    background-color: #000100;
+    background-color: black;
     color: white;
-    box-shadow: 0px 0px 75px 75px #000100;
+    border-radius: 25px 25px 25px 500px;
+    box-shadow: 0px 0px 3px 3px black;
 }
 
 .mainHalf{
