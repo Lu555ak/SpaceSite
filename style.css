@@ -23,7 +23,6 @@ main {
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    font-family: 'Azonix';
 
     display: flex;
     justify-content: center;
@@ -41,33 +40,34 @@ main {
     height: 80vh;
     background-color: black;
     color: white;
-    border-radius: 25px 25px 25px 500px;
+    border-radius: 25px 25px 25px 400px;
     box-shadow: 0px 0px 3px 3px black;
 }
 
-.mainHalf{
+.verticalFlex{
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 2.5%;
 }
 
-.rightHalf{
+.alignEnd{
+    align-self: flex-end;
+}
+
+.horizontalFlex{
     display: flex;
-    flex-direction: column;
-    height: 50%;
+    margin: 2.5%;
 }
 
-.upperHalf{
-    width: 50%;
+.infoBoardText {
+    font-family: sans-serif;
+    font-size: 2.5vh;
 }
 
-.lowerHalf{
-    width: 50%;
-}
-
-.half{
-    width: 50%;
+.infoBoardHeader {
+    font-family: 'Azonix';
+    font-size: 10vh;
 }
 
 h1{
