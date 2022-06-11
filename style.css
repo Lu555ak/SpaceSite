@@ -41,6 +41,7 @@ main {
     height: 80vh;
     background-color: #000100;
     color: white;
+    box-shadow: 0px 0px 75px 75px #000100;
 }
 
 .mainHalf{
