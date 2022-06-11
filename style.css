@@ -6,22 +6,39 @@ html, body {
 }
 
 canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: -9999;
-  }
-
-#main{
-    color: white;
-    font-size: 10px;
-    z-index: 99;
+    z-index: -999;
 }
 
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
 
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#infoBoard{
+    width: 70vw;
+    height: 80vh;
+}
+
+.blur{
+    background: hsl(0% 100% 0% / 0.1);
+    backdrop-filter: blur(1rem);
+}
 
 
 /*.logo{
@@ -31,6 +48,9 @@ canvas {
     width: 4%;
     height: 5%;
 }
+
+background: hsl(0% 100% 0% / 0.1);
+backdrop-filter: blur(1rem);
 
 :root{
     font-size: 2vh;

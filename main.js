@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 var animationActive = true;
+var time = 0;
 
 window.addEventListener('click', onDocumentMouseDown, false);
 
@@ -13,8 +14,8 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#thre
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight)
 renderer.render(scene, camera);
-camera.position.set(0, 300, 600);
-camera.rotation.x = 100;
+camera.position.set(0, 225, 600);
+camera.rotation.x = 150;
 
 // Light Setup
 const pointLight = new THREE.PointLight(0xffffff);
@@ -25,6 +26,19 @@ scene.add(pointLight, ambientLight);
 // Background Setup
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
+
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
 
 //Stars
 function addStar() {
@@ -63,15 +77,12 @@ class Planet{
         this.rotationSpeed = rotationSpeed;
         this.revolutionSpeed = revolutionSpeed;
         //this.parentPosition = parentPosition;
-
-        this.time = 0;
     }
 
     animate() {
-        this.time += 0.01;
         this.instance.rotation.y += this.rotationSpeed / 1000;
-        this.instance.position.x = this.distanceFromParent*Math.cos(this.time * this.revolutionSpeed); //+ this.parentPosition.x;
-        this.instance.position.z = this.distanceFromParent*Math.sin(this.time * this.revolutionSpeed); //+ this.parentPosition.z;
+        this.instance.position.x = this.distanceFromParent*Math.cos(time * this.revolutionSpeed); //+ this.parentPosition.x;
+        this.instance.position.z = this.distanceFromParent*Math.sin(time * this.revolutionSpeed); //+ this.parentPosition.z;
         //this.instance.position.y = this.parentPosition.y;
     }
 }
@@ -113,16 +124,20 @@ planets[8].instance.add(uranusRing1, uranusRing2);
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
+
+
 function animate() {
-    if(animationActive == true){
-        requestAnimationFrame(animate);
-    
+    requestAnimationFrame(animate);
+
+    if(animationActive == true){    
         for(var i=0; i<planets.length; i++){
             planets[i].animate();
         }
-        controls.update();
-        renderer.render(scene, camera);
+        time += 0.01;
     }
+
+    controls.update();
+    renderer.render(scene, camera);
     
 }
 
@@ -147,4 +162,3 @@ if ( intersects.length > 0 ) {
 function planetClick(id){
     animationActive = false;
 }
-

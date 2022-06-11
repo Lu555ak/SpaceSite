@@ -2,10 +2,8 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    /*backdrop-filter:blur(5px) brightness(110%);*/
     background-color: black;
-    /*opacity: 0.95;*/
-    z-index: 100;
+    z-index: 150;
 }
 
   #preloader {
