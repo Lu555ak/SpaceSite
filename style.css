@@ -31,8 +31,37 @@ main {
 }
 
 #infoBoard{
+    display: flex;
     width: 70vw;
     height: 80vh;
+    background-color: white;
+}
+
+.mainHalf{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5%;
+}
+
+.rightHalf{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+.half{
+    margin: 5%;
+    width: 50%;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }
 
 .blur{
