@@ -12,6 +12,10 @@ canvas {
     z-index: -999;
 }
 
+@font-face {
+    font-family: 'Azonix';
+    src: url(Azonix.otf);
+}
 main {
     position: absolute;
     top: 0;
@@ -19,6 +23,7 @@ main {
     z-index: -1;
     width: 100vw;
     height: 100vh;
+    font-family: 'Azonix';
 
     display: flex;
     justify-content: center;
@@ -34,7 +39,8 @@ main {
     display: flex;
     width: 70vw;
     height: 80vh;
-    background-color: white;
+    background-color: #000100;
+    color: white;
 }
 
 .mainHalf{
