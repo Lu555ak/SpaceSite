@@ -17,93 +17,93 @@
         <INFO>Mercury is the smallest planet in the Solar System and the closest to the Sun. It is named after the Roman god Mercurius (Mercury), god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god Hermes (Ἑρμῆς).</INFO>
         <DISCOVERY>Undefined</DISCOVERY>
         <MOONS>0</MOONS>
-        <TEMPERATURE>-180°C - 427°C</TEMPERATURE>
+        <TEMPERATURE>167°C</TEMPERATURE>
         <ROTATION>59 days</ROTATION>
         <REVOLUTION>88 days</REVOLUTION>
-        <TYPE>Planet</TYPE>
+        <TYPE>Terrestrial planet</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Venus</NAME>
         <IMAGE>Planets/venusImage.png</IMAGE>
         <INFO>Venus is the second planet from the Sun and is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be visible to the naked eye in broad daylight. </INFO>
-        <DISCOVERY>1581 BC</DISCOVERY>
+        <DISCOVERY>1600 BC</DISCOVERY>
         <MOONS>0</MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION>225 days</ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE>Planet</TYPE>
+        <TEMPERATURE>464°C</TEMPERATURE>
+        <ROTATION>117 days</ROTATION>
+        <REVOLUTION>225 days</REVOLUTION>
+        <TYPE>Terrestrial planet</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Earth</NAME>
         <IMAGE>Planets/earthImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
+        <INFO>Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers. The remaining 29% of Earth's surface is land, consisting of continents and islands.</INFO>
+        <DISCOVERY>Wasn’t</DISCOVERY>
+        <MOONS>1</MOONS>
+        <TEMPERATURE>15°C</TEMPERATURE>
+        <ROTATION>24 h</ROTATION>
+        <REVOLUTION>365 days</REVOLUTION>
+        <TYPE>Terrestrial planet</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Mars</NAME>
         <IMAGE>Planets/marsImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
+        <INFO>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war. Mars is a terrestrial planet with a thin atmosphere, and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel.</INFO>
+        <DISCOVERY>2000 BC - 1001 BC</DISCOVERY>
+        <MOONS>2</MOONS>
+        <TEMPERATURE>-65°C</TEMPERATURE>
+        <ROTATION>25 h</ROTATION>
+        <REVOLUTION>687 days</REVOLUTION>
+        <TYPE>Terrestrial planet</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Jupiter</NAME>
         <IMAGE>Planets/jupiterImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
+        <INFO>Jupiter is the largest planet in the solar system, named after the king of the gods in Roman mythology. The gas giant Jupiter is a stormy enigma, wrapped in colorful clouds whipped by strong winds that sweep below circles of rings and moons.</INFO>
+        <DISCOVERY>1610.</DISCOVERY>
+        <MOONS>79</MOONS>
+        <TEMPERATURE>-110°C</TEMPERATURE>
+        <ROTATION>10 h</ROTATION>
+        <REVOLUTION>12 years</REVOLUTION>
+        <TYPE>Gass giant</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Saturn</NAME>
         <IMAGE>Planets/saturnImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
-    </PLANET>
-
-    <PLANET>
-        <NAME>Neptune</NAME>
-        <IMAGE>Planets/neptuneImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
+        <INFO>Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</INFO>
+        <DISCOVERY>1610.</DISCOVERY>
+        <MOONS>82</MOONS>
+        <TEMPERATURE>-140°C</TEMPERATURE>
+        <ROTATION>11 h</ROTATION>
+        <REVOLUTION>29 years</REVOLUTION>
+        <TYPE>Gass giant</TYPE>
     </PLANET>
 
     <PLANET>
         <NAME>Uranus</NAME>
         <IMAGE>Planets/uranusImage.png</IMAGE>
-        <INFO></INFO>
-        <DISCOVERY></DISCOVERY>
-        <MOONS></MOONS>
-        <TEMPERATURE></TEMPERATURE>
-        <ROTATION></ROTATION>
-        <REVOLUTION></REVOLUTION>
-        <TYPE></TYPE>
+        <INFO>Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen and helium.  Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see.</INFO>
+        <DISCOVERY>1781.</DISCOVERY>
+        <MOONS>27</MOONS>
+        <TEMPERATURE>-195°C</TEMPERATURE>
+        <ROTATION>17 h</ROTATION>
+        <REVOLUTION>84 years</REVOLUTION>
+        <TYPE>Ice giant</TYPE>
+    </PLANET>
+
+    <PLANET>
+        <NAME>Neptune</NAME>
+        <IMAGE>Planets/neptuneImage.png</IMAGE>
+        <INFO>Neptune is dark, cold, and very windy. It's the last of the planets in our solar system. It's more than 30 times as far from the Sun as Earth is. Neptune has six rings, but they're very hard to see.</INFO>
+        <DISCOVERY>1846.</DISCOVERY>
+        <MOONS>14</MOONS>
+        <TEMPERATURE>-200°C</TEMPERATURE>
+        <ROTATION>16 h</ROTATION>
+        <REVOLUTION>165 years</REVOLUTION>
+        <TYPE>Ice giant</TYPE>
     </PLANET>
 </SYSTEM>

@@ -99,8 +99,8 @@ planets.push(new Planet(7, 'earthTexture.jpeg', 5, 1.4, 110, "Earth"));
 planets.push(new Planet(6, 'marsTexture.jpg', 4, 1.2, 130, "Mars"));
 planets.push(new Planet(20, 'jupiterTexture.jpeg', 9, 0.8, 180, "Jupiter"));
 planets.push(new Planet(15, 'saturnTexture.jpeg', 8, 0.6, 250, "Saturn"));
-planets.push(new Planet(10, 'neptuneTexture.jpeg', 6, 0.35, 290, "Neptune"));
-planets.push(new Planet(10, 'uranusTexture.jpeg', 6.5, 0.15, 340, "Uranus"));
+planets.push(new Planet(10, 'uranusTexture.jpeg', 6, 0.35, 290, "Uranus"));
+planets.push(new Planet(10, 'neptuneTexture.jpeg', 6.5, 0.15, 340, "Neptune"));
 
 
 // Add planet ring
@@ -123,7 +123,7 @@ var uranusRing2 = new THREE.Mesh(
 );
 uranusRing2.rotateX(Math.PI / -17);
 scene.add(uranusRing1, uranusRing2);
-planets[8].instance.add(uranusRing1, uranusRing2);
+planets[7].instance.add(uranusRing1, uranusRing2);
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
