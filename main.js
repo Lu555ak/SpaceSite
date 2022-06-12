@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 var time = 0;
 var clickable = true;
+var planetsData;
 
 window.addEventListener('click', onDocumentMouseDown, false);
 window.addEventListener('wheel', (event) => { event.preventDefault();}, { passive: false });
@@ -164,6 +165,21 @@ function planetClick(id){
     if(clickable == true){
         $("#planetInfo").animate({opacity: 1}, 500, 'swing');
         clickable = false;
+        for(let i=0;i<planetsData.length;i++)
+        {
+            if(planetsData[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue == id)
+            {
+                document.getElementById("planetName").innerHTML = planetsData[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+                document.getElementById("planetImage").src = planetsData[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue;
+                document.getElementById("planetInfoText").innerHTML = planetsData[i].getElementsByTagName("INFO")[0].childNodes[0].nodeValue;
+                document.getElementById("planetDiscovery").innerHTML = planetsData[i].getElementsByTagName("DISCOVERY")[0].childNodes[0].nodeValue;
+                document.getElementById("planetMoons").innerHTML = planetsData[i].getElementsByTagName("MOONS")[0].childNodes[0].nodeValue;
+                document.getElementById("planetTemperature").innerHTML = planetsData[i].getElementsByTagName("TEMPERATURE")[0].childNodes[0].nodeValue;
+                document.getElementById("planetRotation").innerHTML = planetsData[i].getElementsByTagName("ROTATION")[0].childNodes[0].nodeValue;
+                document.getElementById("planetRevolution").innerHTML = planetsData[i].getElementsByTagName("REVOLUTION")[0].childNodes[0].nodeValue;
+                document.getElementById("planetType").innerHTML = planetsData[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue;
+            }
+        }
     }
 }
 
@@ -173,3 +189,22 @@ function backButtonClick() {
 }
 
 document.getElementById("backButton").addEventListener("click", backButtonClick);
+
+//XML
+function load(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if(this.readyState == 4 && this.status == 200){
+            loadXML(this);
+        }
+    };
+    xhttp.open("GET", "data.xml", true);
+    xhttp.send();
+}
+
+function loadXML(xml){
+    var xmlDoc = xml.responseXML;
+    planetsData = xmlDoc.getElementsByTagName("PLANET");
+}
+
+window.addEventListener('load', load);
