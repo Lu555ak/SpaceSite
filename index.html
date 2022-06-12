@@ -5,51 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Space Site</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="module" src="/index.js"></script>
+        <script type="module" src="/main.js"></script>
     </head>
     <body>   
         <canvas id="threeBackground" width="100%" height="100%"></canvas>
-        <script type="module" src="/main.js"></script>
-        
+
         <div id="preloaderBGR">
             <div id="preloader">
                 <div id="loader"></div>
             </div>
         </div>
         
-        <main class="blur">
+        <main id="planetInfo" class="blur">
+            <img id="backButton" class="backButton" src="Images/backButton.svg">
             <div class="center">
                 <div id="infoBoard">
                     <div>
-                        <img src="Planets/uranusImage.png">
+                        <img id="planetImage" src="Planets/venusImage.png">
                     </div>
-                    <div class="verticalFlex">
+                    <div class="verticalFlex marginSetup">
                         <div>
-                            <div class="infoBoardHeader" >PLANET</div>
+                            <div class="infoBoardTitle" >PLANET</div>
                             <hr>
                             <div class="infoBoardText">
-                                <p>The spherical nature of Earth was previously the cause of many heated debates, the idea was mentioned in Greek philosophy in the 6th Century BC but until the 3rd Century BC, it was nothing more than speculation.</p>
+                                <br> The spherical nature of Earth was previously the cause of many heated debates, 
+                                the idea was mentioned in Greek philosophy in the 6th Century BC but until the 
+                                3rd Century BC, it was nothing more than speculation. <br>
                             </div>
                         </div>
+
+                        <div style="height: 70%;"></div>
+
                         <div class="horizontalFlex">
                             <div class="verticalFlex">
-                                <p>Discovery: 11/6/2022</p>
-                                <p>Mass: 25kg</p>
-                                <p>Temperature: 100°C</p>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Discovery: </div> <span class="infoBoardInfoText"> 12/6/2022</span></div>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Moons: </div> <span class="infoBoardInfoText"> 1</span></div>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Temperature: </div> <span class="infoBoardInfoText"> 315°C</span></div>
                             </div>
                             <div class="verticalFlex">
-                                <p>Rotation: 24 h</p>
-                                <p>Revolution: 365 days</p>
-                                <p>Type: Planet</p>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Rotation: </div> <span class="infoBoardInfoText"> 24h</span></div>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Revolution: </div> <span class="infoBoardInfoText"> 365days</span></div>
+                                <div class="infoBoardInfoSpacing"><div class="infoBoardInfoTitle">Type: </div> <span class="infoBoardInfoText"> Planet</span></div>
                             </div>
                         </div>
+
+                        <div style="height: 30%;"></div>
                     </div>
                 </div>
             </div>       
         </main>
-
         <script>
-            window.addEventListener("load", function(){ $("#preloaderBGR").delay(1000).fadeOut(2000, "swing"); })        
+            window.addEventListener("load", function(){ $("#preloaderBGR").delay(1000).fadeOut(2000, "swing"); });
+            $("#planetInfo").animate({opacity: 0.0}, 1, 'linear');               
         </script>
     </body>
 </html>

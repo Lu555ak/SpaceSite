@@ -1,11 +1,13 @@
 import './style.css';
+import './preLoader.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-var animationActive = true;
 var time = 0;
+var clickable = true;
 
 window.addEventListener('click', onDocumentMouseDown, false);
+window.addEventListener('wheel', (event) => { event.preventDefault();}, { passive: false });
 
 // Initial Setup
 const scene = new THREE.Scene();
@@ -129,12 +131,10 @@ const controls = new OrbitControls(camera, renderer.domElement);
 function animate() {
     requestAnimationFrame(animate);
 
-    if(animationActive == true){    
-        for(var i=0; i<planets.length; i++){
-            planets[i].animate();
-        }
-        time += 0.01;
+    for(var i=0; i<planets.length; i++){
+        planets[i].animate();
     }
+    time += 0.01;
 
     controls.update();
     renderer.render(scene, camera);
@@ -156,9 +156,20 @@ var intersects = raycaster.intersectObjects( scene.children );
 console.log(intersects[1]);
 if ( intersects.length > 0 ) {
     intersects[0].object.click();
-}}
+}}   
+
 
 
 function planetClick(id){
-    animationActive = false;
+    if(clickable == true){
+        $("#planetInfo").animate({opacity: 1}, 500, 'swing');
+        clickable = false;
+    }
 }
+
+function backButtonClick() { 
+    $("#planetInfo").animate({opacity: 0.0}, 500, 'swing');
+    clickable = true;
+}
+
+document.getElementById("backButton").addEventListener("click", backButtonClick);
