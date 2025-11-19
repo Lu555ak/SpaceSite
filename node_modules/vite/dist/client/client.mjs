@@ -244,7 +244,17 @@ async function handleMessage(payload) {
                     const el = Array.from(document.querySelectorAll('link')).find((e) => cleanUrl(e.href).includes(searchUrl));
                     if (el) {
                         const newPath = `${base}${searchUrl.slice(1)}${searchUrl.includes('?') ? '&' : '?'}t=${timestamp}`;
-                        el.href = new URL(newPath, el.href).href;
+                        // rather than swapping the href on the existing tag, we will
+                        // create a new link tag. Once the new stylesheet has loaded we
+                        // will remove the existing link tag. This removes a Flash Of
+                        // Unstyled Content that can occur when swapping out the tag href
+                        // directly, as the new stylesheet has not yet been loaded.
+                        const newLinkTag = el.cloneNode();
+                        newLinkTag.href = new URL(newPath, el.href).href;
+                        const removeOldEl = () => el.remove();
+                        newLinkTag.addEventListener('load', removeOldEl);
+                        newLinkTag.addEventListener('error', removeOldEl);
+                        el.after(newLinkTag);
                     }
                     console.log(`[vite] css hot updated: ${searchUrl}`);
                 }
